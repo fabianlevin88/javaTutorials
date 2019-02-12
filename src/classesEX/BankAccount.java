@@ -1,5 +1,7 @@
 package classesEX;
 
+import java.util.prefs.BackingStoreException;
+
 public class BankAccount {
 
     private String accountNumber;
@@ -8,6 +10,22 @@ public class BankAccount {
     private String email;
     private String phone;
 
+    /**
+     * This is a custom, no parameters class constructor
+     */
+    public BankAccount() {
+        this("AAA000", 0, "John Doe", "no-email@no-email.com", "000111222333");
+        System.out.println("EMPTY account created");
+    }
+
+    /**
+     * Custom class constructor
+     * @param accountNumber
+     * @param balance
+     * @param customer
+     * @param email
+     * @param phone
+     */
     public BankAccount(String accountNumber, double balance, String customer, String email, String phone) {
         this.accountNumber = accountNumber;
         this.balance = balance;
