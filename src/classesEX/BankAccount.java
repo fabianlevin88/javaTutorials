@@ -54,6 +54,10 @@ public class BankAccount {
         this.phone = phone;
     }
 
+    /**
+     * deposit funds to the account
+     * @param funds
+     */
     public void depositFunds(double funds) {
         if (funds > 0) {
             setBalance("deposit", funds);
@@ -61,6 +65,10 @@ public class BankAccount {
         }
     }
 
+    /**
+     * withdraw funds from the account
+     * @param funds
+     */
     public void withdrawFunds(double funds) {
 
         if (getBalance() > 0 && funds < getBalance()) {
