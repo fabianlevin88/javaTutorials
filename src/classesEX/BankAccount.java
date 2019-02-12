@@ -4,11 +4,21 @@ public class BankAccount {
 
     private String accountNumber;
     private double balance;
-    private String oustomerName;
+    private String customerName;
     private String email;
-    private int phone;
+    private String phone;
+
+    public BankAccount(String accountNumber, double balance, String customer, String email, String phone) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customer;
+        this.email = email;
+        this.phone = phone;
+        System.out.println("account created");
+    }
 
     public String getAccountNumber() {
+        System.out.println("Account: " +accountNumber);
         return accountNumber;
     }
 
@@ -17,6 +27,7 @@ public class BankAccount {
     }
 
     public double getBalance() {
+        System.out.println("Balance: " + balance);
         return balance;
     }
 
@@ -30,15 +41,17 @@ public class BankAccount {
 
     }
 
-    public String getOustomerName() {
-        return oustomerName;
+    public String getCustomerName() {
+        System.out.println("Customer: " + customerName);
+        return customerName;
     }
 
-    public void setOustomerName(String oustomerName) {
-        this.oustomerName = oustomerName;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
     public String getEmail() {
+        System.out.println("Email: " + email);
         return email;
     }
 
@@ -46,11 +59,12 @@ public class BankAccount {
         this.email = email;
     }
 
-    public int getPhone() {
+    public String getPhone() {
+        System.out.println("Phone number: " + phone);
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -61,7 +75,7 @@ public class BankAccount {
     public void depositFunds(double funds) {
         if (funds > 0) {
             setBalance("deposit", funds);
-            System.out.println("You made a deposit of: " + funds + " your balance is: " + getBalance());
+            System.out.println("You made a deposit of: " + funds + " your balance is: " + balance);
         }
     }
 
@@ -71,9 +85,9 @@ public class BankAccount {
      */
     public void withdrawFunds(double funds) {
 
-        if (getBalance() > 0 && funds < getBalance()) {
+        if (balance > 0 && funds < balance) {
             setBalance("withdraw", funds);
-            System.out.println("After withdrawing " + funds + " your account balance is: " + getBalance());
+            System.out.println("After withdrawing " + funds + " your account balance is: " + balance);
         } else {
             System.out.println("insufficient funds");
         }
