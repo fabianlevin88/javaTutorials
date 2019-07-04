@@ -1,10 +1,12 @@
 package speedConverterEX;
 
+import static speedConverterEX.SpeedConverter.*;
+
 public class Main {
 
     public static void main(String[] args) {
-        SpeedConverter.printConversion(19.7);
+        printConversion(19.7);
 
-        SpeedConverter.printConversion(34);
+        printConversion(34);
     }
 }

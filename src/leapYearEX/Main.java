@@ -1,19 +1,21 @@
 package leapYearEX;
 
+import static leapYearEX.LeapYear.*;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        LeapYear.isLeapYear(-1700);
+        isLeapYear(-1700);
 
-        LeapYear.isLeapYear(2016);
+        isLeapYear(2016);
 
-        LeapYear.isLeapYear(2018);
+        isLeapYear(2018);
 
-        LeapYear.isLeapYear(2000);
+        isLeapYear(2000);
 
-        LeapYear.isLeapYear(2500);
+        isLeapYear(2500);
 
-        LeapYear.isLeapYear(2004);
+        isLeapYear(2004);
     }
 }
