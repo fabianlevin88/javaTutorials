@@ -6,16 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        isLeapYear(-1700);
+        System.out.println(isLeapYear(-1700));
 
-        isLeapYear(2016);
+        System.out.println(isLeapYear(2016));
 
-        isLeapYear(2018);
+        System.out.println(isLeapYear(2018));
 
-        isLeapYear(2000);
+        System.out.println(isLeapYear(2000));
 
-        isLeapYear(2500);
+        System.out.println(isLeapYear(2500));
 
-        isLeapYear(2004);
+        System.out.println(isLeapYear(2004));
     }
 }
