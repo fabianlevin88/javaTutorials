@@ -1,7 +1,5 @@
 package classesEX;
 
-import java.util.prefs.BackingStoreException;
-
 public class BankAccount {
 
     private String accountNumber;
