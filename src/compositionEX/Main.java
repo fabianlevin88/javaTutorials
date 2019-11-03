@@ -8,11 +8,11 @@ public class Main {
         Monitor monitor = new Monitor("BEAST-23.1", "DELL", 27, new Resolution(2540, 1440));
         PC pc = new PC(theCase, monitor, motherboard);
 
-        pc.getTheCase().pressPowerUpButton();
+        pc.powerUp();
 
-        pc.getMotherboard().BoottingUp();
+        pc.startPC();
 
-        pc.getMonitor().drawPixelAt(30, 500, "red");
+        pc.drawLogo();
     }
 
 }
