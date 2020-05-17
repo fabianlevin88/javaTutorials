@@ -14,6 +14,7 @@ public class Contacts {
         setName(name);
         setLastName(lastName);
         setPhone(phone);
+        System.out.println("Contact saved");
     }
 
     public Contacts() {}
