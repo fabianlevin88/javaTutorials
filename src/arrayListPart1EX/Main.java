@@ -22,16 +22,8 @@ public class Main {
 
         printGroceryList(list);
 
-        removeItem(list, 1);
+        System.out.println(removeItem(list, "eggs"));
 
         printGroceryList(list);
-
-        if (findItem(list, item)) {
-            System.out.println(item.toUpperCase() + " located at position: " + itemPosition(list, item));
-        } else {
-            System.out.println(item.toUpperCase() + " not found in the list");
-        }
-
-
     }
 }

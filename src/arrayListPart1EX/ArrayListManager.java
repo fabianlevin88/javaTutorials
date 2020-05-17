@@ -49,26 +49,21 @@ public class ArrayListManager {
         }
     }
 
-    static void removeItem(ArrayList<String> list, int position) {
-
-        try {
-            System.out.println(list.get(position) + " Removed from the list");
-
-            list.remove(position);
-        } catch (IndexOutOfBoundsException e) {
-
-            System.out.println(list.get(list.size() -1 ) + " Removed from the list");
-
-            list.remove(list.size() - 1);
+    static String removeItem(ArrayList<String> arrayList, String searchItem) {
+        if (findItem(arrayList, searchItem)) {
+            arrayList.remove(itemPosition(arrayList, searchItem));
+            return "Element " + searchItem + " removed from the list";
         }
+
+        return "Element not found in the list";
     }
 
-    static boolean findItem(ArrayList<String> arrayList, String searchItem) {
+    private static boolean findItem(ArrayList<String> arrayList, String searchItem) {
 
         return arrayList.contains(searchItem);
     }
 
-    static int itemPosition(ArrayList<String> arrayList, String searchItem) {
+    private static int itemPosition(ArrayList<String> arrayList, String searchItem) {
 
         return arrayList.indexOf(searchItem);
     }

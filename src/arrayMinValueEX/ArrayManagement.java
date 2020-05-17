@@ -8,7 +8,7 @@ public class ArrayManagement {
     private static Scanner scanner = new Scanner(System.in);
 
     public static int[] createArray() {
-        System.out.println("How many elemets will the array have?\r");
+        System.out.println("How many elements will the array have?\r");
 
         int[] array = new int[scanner.nextInt()];
 
