@@ -92,7 +92,7 @@ public class MobilePhone {
             contacts.getListOfContacts();
             System.out.println("Which contact would you like to modify? \r");
             position = scanner.nextInt();
-            if (position <= contacts.getListSize()) {
+            if (position <= contacts.getListSize() && position > 0) {
                 System.out.println("What would you like to modify? \r");
                 printModifyOptions();
                 option = scanner.nextInt();
@@ -116,9 +116,12 @@ public class MobilePhone {
                         System.out.println("option not supported");
                         break;
                 }
+                System.out.println("Contact has been modified");
             } else {
-                System.out.println("Item is not present in the list");
+                System.out.println("Element selected is not in the list");
             }
+        } else {
+            System.out.println("List is empty");
         }
 
     }
@@ -130,9 +133,9 @@ public class MobilePhone {
             System.out.println("Which contact would you like to delete? \r");
             position = scanner.nextInt();
 
-            if (position <= contacts.getListSize()) {
+            if (position <= contacts.getListSize() && position > 0) {
                 contacts.removeContact(position);
-
+                System.out.println("Contact has been removed");
             } else {
                 System.out.println("list do not have that element");
             }
