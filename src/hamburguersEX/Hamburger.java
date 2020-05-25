@@ -1,10 +1,6 @@
 package hamburguersEX;
 
-import sun.jvm.hotspot.oops.Array;
-
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 public class Hamburger {
     // The basic hamburger should have the following items.
