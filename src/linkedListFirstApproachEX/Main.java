@@ -59,7 +59,7 @@ public class Main {
 
         if (index < arrayLength) {
             intList.add(index, newValue);
-            System.out.println("Inserted value of: " + newValue + " in the index -> " + (intList.size() -1));
+            System.out.println("Inserted value of: " + newValue + " in the index -> " + index);
         } else {
             System.out.println("As the index was too big for the array list, the last position has been changed");
             System.out.println("Inserted value of: " + newValue);
